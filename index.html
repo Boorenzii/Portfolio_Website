@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jawad Ali - Software Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preload" href="assets/Jawad_Ali_Resume.pdf" as="document">
+</head>
+<body>
+    <!-- Shortcut Guide -->
+    <div class="shortcut-guide">
+        <div class="shortcut-title">KEYBOARD SHORTCUTS</div>
+        <div class="shortcut-item">
+            <span class="key">M</span>
+            <span class="description">Matrix</span>
+        </div>
+        <div class="shortcut-item">
+            <span class="key">T</span>
+            <span class="description">Terminal</span>
+        </div>
+        <div class="shortcut-item">
+            <span class="key">H</span>
+            <span class="description">Help</span>
+        </div>
+        <div class="shortcut-item">
+            <span class="key">E</span>
+            <span class="description">Effects</span>
+        </div>
+    </div>
+
+    <!-- Matrix Rain Canvas -->
+    <canvas id="matrixRain"></canvas>
+
+    <!-- Navigation -->
+    <nav class="nav-links">
+        <a href="#home">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#projects">PROJECTS</a>
+        <a href="#experience">EXPERIENCE</a>
+        <a href="#contact">CONTACT</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="name-container" title="Click for effects (or press 'E')">
+                    <h1 class="glitch-name" data-text="JAWAD ALI">JAWAD ALI</h1>
+                </div>
+                <p class="subtitle">Software Engineer</p>
+                <div class="cursor"></div>
+                <div class="scroll-arrow">↓</div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <h2 class="section-title">ABOUT ME</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Software Engineering student at Iowa State University focusing on building innovative solutions. Passionate about embedded systems and software development, with a strong foundation in Java and C programming. Currently exploring the intersection of hardware and software through embedded systems projects.</p>
+                    <br>
+                    <p class="graduation-date">Expected Graduation: May 2027</p>
+                </div>
+
+                <!-- Skills Section -->
+                <div class="skills-section">
+                    <h3 class="section-subtitle">SKILLS</h3>
+                    <div class="skill-grid">
+                        <div class="skill-item">
+                            <span class="skill-name">Java</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">C Programming</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Algorithms</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">React.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">HTML/CSS</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Campus Involvement -->
+                <div class="involvement-section">
+                    <h3 class="section-subtitle">CAMPUS INVOLVEMENT</h3>
+                    <ul class="involvement-list">
+                        <li>Science Bound</li>
+                        <li>Data Science Club</li>
+                        <li>Web Development Club</li>
+                        <li>Gaming & Esports Club</li>
+                        <li>Software Engineering Club</li>
+                        <li>Solar Power Club - Embedded Software Team</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <h2 class="section-title">EXPERIENCE</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <h3>Software Engineering Peer Mentor</h3>
+                    <p class="experience-place">Iowa State University</p>
+                    <p class="experience-date">August 2024 - Present</p>
+                    <ul class="experience-details">
+                        <li>Counsel incoming students</li>
+                        <li>Assess student progress</li>
+                        <li>Provide academic support</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <h3>Embedded Software Developer</h3>
+                    <p class="experience-place">Solar Power Club</p>
+                    <p class="experience-date">November 2024 - Present</p>
+                    <ul class="experience-details">
+                        <li>Develop embedded systems solutions</li>
+                        <li>Collaborate with engineering teams</li>
+                        <li>Implement power management systems</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <h3>Science Bound Host</h3>
+                    <p class="experience-place">Science Bound, Ames, IA</p>
+                    <p class="experience-date">August 2023 - Present</p>
+                    <ul class="experience-details">
+                        <li>Led STEM activities</li>
+                        <li>Mentored students</li>
+                        <li>Supported educational programs</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <h3>Camp Educator</h3>
+                    <p class="experience-place">Science Center of Iowa, Des Moines, IA</p>
+                    <p class="experience-date">May 2023 - Present</p>
+                    <ul class="experience-details">
+                        <li>Develop and implement engaging lesson plans</li>
+                        <li>Collaborate with team to provide educational experiences</li>
+                        <li>Build relationships with students and parents</li>
+                        <li>Create interactive STEM activities</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <h2 class="section-title">PROJECTS</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Weather Application</h3>
+                    <p>Real-time weather updates and forecasts</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">API Integration</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Snake Game</h3>
+                    <p>Classic game with modern mechanics</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Game Development</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Maze Navigation</h3>
+                    <p>Interactive maze with DS4 controller</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">C</span>
+                        <span class="tech-tag">Game Development</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Bowling Game</h3>
+                    <p>Score tracking system</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">OOP</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Connect Section -->
+        <section id="contact" class="section">
+            <h2 class="section-title">CONNECT</h2>
+            <div class="connect-grid">
+                <div class="connect-card">
+                    <a href="https://github.com/Boorenzii" target="_blank">GITHUB</a>
+                </div>
+                <div class="connect-card">
+                    <a href="https://www.linkedin.com/in/jawadhali/" target="_blank">LINKEDIN</a>
+                </div>
+                <div class="connect-card">
+                    <a href="mailto:jfrenzii50@gmail.com">EMAIL</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Terminal -->
+    <div class="terminal">
+        <div class="terminal-header">
+            <span class="terminal-title">~/jawad-terminal</span>
+            <button class="terminal-close">&times;</button>
+        </div>
+        <div class="terminal-content">
+            <p class="terminal-welcome">Welcome! Type 'help' for commands.</p>
+            <div id="terminal-output"></div>
+        </div>
+        <div class="terminal-input-line">
+            <span class="terminal-prompt">guest@portfolio:~$</span>
+            <input type="text" class="terminal-input" autofocus>
+        </div>
+    </div>
+
+    <!-- Hidden Resume Download -->
+    <a id="resumeDownload" style="display: none;" download="Jawad_Ali_Resume.pdf" href="assets/Jawad_Ali_Resume.pdf">Download Resume</a>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,455 @@
+:root {
+    --neon-blue: #00f3ff;
+    --neon-purple: #d482ff;
+    --neon-green: #00ff9d;
+    --dark-bg: #000000;
+    --text-color: #cccccc;
+    --cyber-glow: 0 0 10px var(--neon-blue),
+                 0 0 20px var(--neon-blue),
+                 0 0 40px var(--neon-blue);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', monospace;
+}
+
+body {
+    background: var(--dark-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+main {
+    padding: 2rem;
+    padding-top: 80px;
+}
+
+/* Keyboard Shortcuts Guide */
+.shortcut-guide {
+    position: fixed;
+    right: 20px;
+    top: 100px;
+    z-index: 1001;
+    background: rgba(0,0,0,0.8);
+    padding: 1rem;
+    border: 1px solid var(--neon-blue);
+    border-radius: 5px;
+}
+
+.shortcut-title {
+    color: var(--neon-blue);
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.shortcut-item {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.shortcut-item:hover {
+    opacity: 1;
+}
+
+.key {
+    background: rgba(0,243,255,0.1);
+    border: 1px solid var(--neon-blue);
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    margin-right: 0.5rem;
+    color: var(--neon-blue);
+}
+
+/* Navigation */
+.nav-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.9);
+    padding: 1rem 2rem;
+    z-index: 1000;
+    border-bottom: 1px solid var(--neon-blue);
+}
+
+.nav-links a {
+    color: var(--neon-purple);
+    text-decoration: none;
+    margin-right: 2rem;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background: var(--neon-blue);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--neon-blue);
+    text-shadow: 0 0 10px var(--neon-blue);
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.glitch-name {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 1rem;
+    animation: nameColorCycle 10s infinite;
+    cursor: pointer;
+}
+
+.scroll-arrow {
+    position: absolute;
+    bottom: 8rem; /* Changed from 2rem to 8rem to move it up */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5rem; /* Made slightly bigger */
+    color: var(--neon-blue);
+    animation: bounce 2s infinite;
+    cursor: pointer;
+    text-shadow: 0 0 10px var(--neon-blue);
+    z-index: 10; /* Ensure it's always visible */
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translate(-50%, 0); }
+    40% { transform: translate(-50%, -30px); }
+    60% { transform: translate(-50%, -15px); }
+}
+
+@keyframes nameColorCycle {
+    0% { color: #fff; text-shadow: var(--cyber-glow); }
+    33% { color: var(--neon-blue); text-shadow: 0 0 20px var(--neon-blue); }
+    66% { color: var(--neon-purple); text-shadow: 0 0 20px var(--neon-purple); }
+    100% { color: #fff; text-shadow: var(--cyber-glow); }
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+/* About Section */
+.section {
+    margin: 6rem 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--neon-blue);
+    padding-bottom: 0.5rem;
+    width: fit-content;
+    margin-bottom: 3rem;
+}
+
+.about-text {
+    margin-bottom: 3rem;
+}
+
+.graduation-date {
+    color: var(--neon-blue);
+    font-weight: bold;
+}
+
+/* Skills Section */
+.skills-section {
+    margin: 4rem 0;
+}
+
+.section-subtitle {
+    color: var(--neon-blue);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-item {
+    border: 1px solid var(--neon-blue);
+    padding: 1.5rem;
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.skill-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid var(--neon-blue);
+    box-shadow: 0 0 15px var(--neon-blue);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+}
+
+.skill-item:hover::before {
+    opacity: 1;
+}
+
+/* Campus Involvement */
+.involvement-list {
+    list-style: none;
+    margin-left: 1rem;
+}
+
+.involvement-list li {
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.involvement-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--neon-blue);
+}
+
+/* Experience Cards */
+.experience-grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.experience-card {
+    border: 1px solid var(--neon-blue);
+    padding: 2rem;
+    background: rgba(0,0,0,0.5);
+    transition: all 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px var(--neon-blue);
+}
+
+.experience-place {
+    color: var(--neon-purple);
+    margin: 0.5rem 0;
+}
+
+.experience-details {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.experience-details li {
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.experience-details li::before {
+    content: "-";
+    position: absolute;
+    left: 0;
+    color: var(--neon-blue);
+}
+
+/* Projects Section */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    border: 1px solid var(--neon-blue);
+    padding: 2rem;
+    background: rgba(0,0,0,0.5);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px var(--neon-blue);
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.tech-tag {
+    background: rgba(0,243,255,0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    border: 1px solid var(--neon-blue);
+}
+
+/* Connect Section */
+.connect-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.connect-card {
+    border: 1px solid var(--neon-blue);
+    padding: 2rem;
+    background: rgba(0,0,0,0.5);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.connect-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px var(--neon-blue);
+}
+
+.connect-card a {
+    color: var(--neon-purple);
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.connect-card:hover a {
+    color: var(--neon-blue);
+    text-shadow: 0 0 10px var(--neon-blue);
+}
+
+/* Terminal */
+.terminal {
+    display: none;
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    right: 2rem;
+    height: 400px;
+    background: rgba(0,0,0,0.95);
+    border: 1px solid var(--neon-blue);
+    z-index: 1000;
+}
+
+.terminal-header {
+    padding: 1rem;
+    border-bottom: 1px solid var(--neon-blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.terminal-close {
+    background: transparent;
+    border: none;
+    color: var(--neon-blue);
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.terminal-content {
+    padding: 1rem;
+    height: calc(100% - 90px);
+    overflow-y: auto;
+    color: var(--neon-green);
+}
+
+.terminal-input-line {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+.terminal-prompt {
+    color: var(--neon-green);
+    margin-right: 0.5rem;
+}
+
+.terminal-input {
+    background: transparent;
+    border: none;
+    color: var(--neon-green);
+    font-family: 'Courier New', monospace;
+    width: 100%;
+    outline: none;
+}
+
+/* Matrix Rain */
+#matrixRain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .glitch-name {
+        font-size: 3rem;
+    }
+
+    .nav-links {
+        padding: 1rem;
+    }
+
+    .nav-links a {
+        margin-right: 1rem;
+    }
+
+    .connect-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .terminal {
+        left: 1rem;
+        right: 1rem;
+        bottom: 1rem;
+    }
+
+    .shortcut-guide {
+        display: none;
+    }
+}
